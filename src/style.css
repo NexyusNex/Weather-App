@@ -1,10 +1,39 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: sans-serif;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: #7bb9ff;
   background-size: cover;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 50px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: #c7c7c7;
+}
+
+.footer a:visited {
+  color: #adf3ff;
+}
+
+.footer a:visited:hover {
+  color: #91ccd6;
 }

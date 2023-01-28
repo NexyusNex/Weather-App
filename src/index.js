@@ -29,18 +29,19 @@ async function loadWeather(text) {
   const city = document.querySelector("#city");
   city.textContent = json.name + ", " + json.sys.country;
 
-  const temp = document.querySelector(".temp");
+  const tempContainer = document.querySelector(".temperature");
+  tempContainer.innerHTML = "";
+  const temp = document.createElement("div");
   temp.textContent = json.main.temp + "°C";
+  const tempImg = document.createElement("img");
+
+  tempImg.src =
+    await `http://openweathermap.org/img/w/${json.weather[0].icon}.png`;
+  tempContainer.appendChild(temp);
+  tempContainer.appendChild(tempImg);
 
   const condition = document.querySelector(".condition");
-  condition.innerHTML = "";
-  const conditionImg = document.createElement("img");
-  conditionImg.src =
-    await `http://openweathermap.org/img/w/${json.weather[0].icon}.png`;
-  const conditionText = document.createElement("div");
-  conditionText.textContent = json.weather[0].main;
-  condition.appendChild(conditionImg);
-  condition.appendChild(conditionText);
+  condition.textContent = json.weather[0].main;
 
   const feelsLike = document.querySelector(".feels-like");
   feelsLike.textContent = "Feels like: " + json.main.feels_like + "°C";
@@ -49,7 +50,7 @@ async function loadWeather(text) {
   humidity.textContent = "Humidity: " + json.main.humidity + "%";
 
   const wind = document.querySelector(".wind");
-  wind.textContent = "Wind: " + json.wind.speed;
+  wind.textContent = "Wind: " + json.wind.speed + "k/m";
 
   console.log(json.wind.speed);
   console.log(json.main.feels_like);

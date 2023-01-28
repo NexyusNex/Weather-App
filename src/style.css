@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 0;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 3px black;
 }
 
 .header img {
@@ -34,10 +34,31 @@
 }
 
 .info-container {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 3px black;
+  width: 400px;
+  gap: 12px;
+}
+
+#city {
+  font-size: 36px;
+}
+
+.temperature {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.condition {
+  font-size: 1.5rem;
+}
+
+.more-info {
+  display: flex;
 }
 
 .input-container {
@@ -47,7 +68,7 @@
   justify-content: center;
   width: 400px;
   height: 400px;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 3px black;
   gap: 12px;
 }
 
@@ -90,7 +111,7 @@
   justify-content: center;
   margin-top: auto;
   height: 50px;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 3px black;
 }
 
 .footer a {

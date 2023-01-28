@@ -19,7 +19,7 @@ magnifyImg.src = magnify;
 
 async function loadWeather(text) {
   const url =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     text +
     "&units=metric&appid=59189f0734d8fa112376a0986d5aec75";
   const response = await fetch(url, { mode: "cors" });
@@ -36,7 +36,7 @@ async function loadWeather(text) {
   const tempImg = document.createElement("img");
 
   tempImg.src =
-    await `http://openweathermap.org/img/w/${json.weather[0].icon}.png`;
+    await `https://openweathermap.org/img/w/${json.weather[0].icon}.png`;
   tempContainer.appendChild(temp);
   tempContainer.appendChild(tempImg);
 

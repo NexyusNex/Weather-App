@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "docs"),
-    filename: "[name].html",
+    filename: "[name].js",
   },
   devServer: {
     static: {

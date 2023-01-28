@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  background-color: #7bb9ff;
+  background-size: cover;
+}

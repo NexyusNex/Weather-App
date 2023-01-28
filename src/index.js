@@ -2,9 +2,13 @@ import "./style.css";
 
 import bluesky from "./bluesky.jpg";
 import mapmarker from "./map-marker.svg";
+import logo from "./weatherlogo.png";
 
 const container = document.querySelector(".container");
 container.style.backgroundImage = `url(${bluesky}`;
+
+const logoImg = document.querySelector("#logo");
+logoImg.src = logo;
 
 const markerImg = document.querySelector("#location-marker");
 markerImg.src = mapmarker;

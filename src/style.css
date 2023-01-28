@@ -43,7 +43,37 @@
   justify-content: center;
   width: 400px;
   height: 400px;
-  background-color: rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px black;
+  gap: 12px;
+}
+
+.input-container input {
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  border-style: none;
+  outline: none;
+  padding-left: 32px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.input-container input:hover {
+  outline: 2px solid black;
+}
+
+.input-container label {
+  font-size: 2em;
+}
+
+#magnify {
+  position: absolute;
+  height: 1.5rem;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+#magnify:hover {
+  cursor: pointer;
 }
 
 #location-marker {
@@ -55,8 +85,8 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  background-color: rgba(0, 0, 0, 0.25);
   height: 50px;
+  text-shadow: 1px 1px 3px black;
 }
 
 .footer a {

@@ -3,6 +3,7 @@ import "./style.css";
 import bluesky from "./bluesky.jpg";
 import mapmarker from "./map-marker.svg";
 import logo from "./weatherlogo.png";
+import magnify from "./magnify.svg";
 
 const container = document.querySelector(".container");
 container.style.backgroundImage = `url(${bluesky}`;
@@ -12,6 +13,9 @@ logoImg.src = logo;
 
 const markerImg = document.querySelector("#location-marker");
 markerImg.src = mapmarker;
+
+const magnifyImg = document.querySelector("#magnify");
+magnifyImg.src = magnify;
 
 async function loadWeather() {
   const response = await fetch(

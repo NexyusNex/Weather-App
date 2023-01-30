@@ -1,5 +1,10 @@
 import returnDate from "./returnDate";
 
+function errorFunction(error) {
+  const json = error.json();
+  alert(json.message);
+}
+
 export default async function loadWeather(text) {
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -8,7 +13,12 @@ export default async function loadWeather(text) {
   const response = await fetch(url, { mode: "cors" });
   const json = await response.json();
   console.log(json);
-
+  const error = document.querySelector(".error");
+  if (json.message) {
+    error.textContent = json.message;
+    return;
+  }
+  error.textContent = "";
   const city = document.querySelector("#city");
   city.textContent = json.name + ", " + json.sys.country;
 

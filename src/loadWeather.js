@@ -1,9 +1,5 @@
 import returnDate from "./returnDate";
-
-function errorFunction(error) {
-  const json = error.json();
-  alert(json.message);
-}
+import changeBackground from "./changeBackground";
 
 export default async function loadWeather(text) {
   const url =
@@ -19,6 +15,9 @@ export default async function loadWeather(text) {
     return;
   }
   error.textContent = "";
+
+  await changeBackground(json.weather[0].main);
+
   const city = document.querySelector("#city");
   city.textContent = json.name + ", " + json.sys.country;
 

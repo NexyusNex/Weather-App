@@ -11,6 +11,7 @@
   background-color: #7bb9ff;
   background-size: cover;
   color: white;
+  transform: background-image 300ms ease;
 }
 
 .header {

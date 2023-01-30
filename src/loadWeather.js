@@ -8,7 +8,6 @@ export default async function loadWeather(text) {
     "&units=metric&appid=59189f0734d8fa112376a0986d5aec75";
   const response = await fetch(url, { mode: "cors" });
   const json = await response.json();
-  console.log(json);
   const error = document.querySelector(".error");
   if (json.message) {
     error.textContent = json.message;

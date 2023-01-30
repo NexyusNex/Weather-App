@@ -43,6 +43,10 @@
   gap: 12px;
 }
 
+.city-time {
+  font-size: 20px;
+}
+
 #city {
   font-size: 36px;
 }

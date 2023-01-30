@@ -24,7 +24,7 @@ export default async function loadWeather(text) {
   const tempContainer = document.querySelector(".temperature");
   tempContainer.innerHTML = "";
   const temp = document.createElement("div");
-  temp.textContent = json.main.temp + "°C";
+  temp.textContent = Math.round(json.main.temp) + "°C";
   const tempImg = document.createElement("img");
 
   tempImg.src =

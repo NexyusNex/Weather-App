@@ -19,18 +19,18 @@ markerImg.src = mapmarker;
 const magnifyImg = document.querySelector("#magnify");
 magnifyImg.src = magnify;
 
-function returnDate(dt, timezone) {
-  let date = new Date();
-  let localTime = date.getTime();
-  let localOffset = date.getTimezoneOffset() * 60000;
-  let utc = localTime + localOffset;
-  let local_date = utc + 1000 * timezone;
-  return new Date(local_date).toLocaleString();
-}
-
 magnifyImg.addEventListener("click", () => {
   const text = document.querySelector("#text").value;
+  if (text == "") return;
   loadWeather(text);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    const text = document.querySelector("#text").value;
+    if (text == "") return;
+    loadWeather(text);
+  }
 });
 
 loadWeather("belgrade");

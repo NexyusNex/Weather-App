@@ -7,7 +7,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100svh;
   background-color: #7bb9ff;
   background-size: cover;
   color: white;
@@ -40,7 +40,7 @@
   flex-direction: column;
   align-items: center;
   text-shadow: 2px 2px 3px black;
-  width: 400px;
+  width: clamp(300px, 90%, 400px);
   gap: 12px;
 }
 
@@ -71,7 +71,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: clamp(300px, 90%, 400px);
   height: 400px;
   text-shadow: 2px 2px 3px black;
   gap: 12px;
@@ -139,4 +139,16 @@
 
 .footer a:visited:hover {
   color: #91ccd6;
+}
+
+@media screen and (width<=750px) {
+  .weather-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 6px;
+  }
 }

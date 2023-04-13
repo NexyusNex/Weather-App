@@ -1,10 +1,7 @@
 import "./style.css";
-
-import clear from "./clear.jpg";
 import mapmarker from "./map-marker.svg";
 import logo from "./weatherlogo.png";
 import magnify from "./magnify.svg";
-
 import loadWeather from "./loadWeather";
 
 const logoImg = document.querySelector("#logo");
